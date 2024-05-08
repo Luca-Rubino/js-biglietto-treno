@@ -25,3 +25,8 @@ let finalPrice;
 
 finalPrice = userKm * price;
 console.log(finalPrice);
+
+//Calcolo variabili sconto
+
+const sales20 = (finalPrice * 20) / 100;
+const sales40 = (finalPrice * 40) / 100;
