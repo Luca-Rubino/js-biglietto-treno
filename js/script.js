@@ -16,3 +16,12 @@ const userKm = parseInt(prompt("Quanti km devi percorrere?"));
 // Chiedo l'età del passeggero
 
 const userAge = parseInt(prompt("età passeggero"));
+
+// Calcolo il prezzo del viaggio totale (0.276 cent /km)senza sconti
+
+const price = 0.276;
+
+let finalPrice;
+
+finalPrice = userKm * price;
+console.log(finalPrice);
