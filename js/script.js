@@ -30,3 +30,15 @@ console.log(finalPrice);
 
 const sales20 = (finalPrice * 20) / 100;
 const sales40 = (finalPrice * 40) / 100;
+
+// Calcolo i prezzi utilizzando le varie variabili
+
+if (userAge < 18) {
+    finalPrice = finalPrice - sales20;
+    document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
+} else if (userAge > 65) {
+    finalPrice = finalPrice - sales40;
+    document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
+} else {
+    document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
+}
