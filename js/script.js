@@ -28,16 +28,16 @@ console.log(finalPrice);
 
 //Calcolo variabili sconto
 
-const sales20 = (finalPrice * 20) / 100;
-const sales40 = (finalPrice * 40) / 100;
+const sales21 = (finalPrice * 21) / 100;
+const sales42 = (finalPrice * 42) / 100;
 
 // Calcolo i prezzi utilizzando le varie variabili
 
 if (userAge < 18) {
-    finalPrice = finalPrice - sales20;
+    finalPrice = finalPrice - sales21;
     document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
 } else if (userAge > 65) {
-    finalPrice = finalPrice - sales40;
+    finalPrice = finalPrice - sales42;
     document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
 } else {
     document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
