@@ -24,21 +24,24 @@ const price = 0.276;
 let finalPrice;
 
 finalPrice = userKm * price;
+
 console.log(finalPrice);
+
+document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
 
 //Calcolo variabili sconto
 
 const sales21 = (finalPrice * 21) / 100;
 const sales42 = (finalPrice * 42) / 100;
 
-// Calcolo i prezzi utilizzando le varie variabili
+// Calcolo i prezzi utilizzando le varie condizioni
 
 if (userAge < 18) {
     finalPrice = finalPrice - sales21;
-    document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
+    document.getElementById('price-sales').innerHTML = ('€ ') + finalPrice.toFixed(2);
 } else if (userAge > 65) {
     finalPrice = finalPrice - sales42;
-    document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
+    document.getElementById('price-sales').innerHTML = ('€ ') + finalPrice.toFixed(2);
 } else {
-    document.getElementById('price').innerHTML = ('€ ') + finalPrice.toFixed(2);
+    document.getElementById('price-sales').innerHTML = ('€ ') + finalPrice.toFixed(2);
 }
